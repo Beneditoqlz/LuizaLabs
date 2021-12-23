@@ -29,3 +29,11 @@ POSTMAN: API Client que facilita aos desenvolvedores criar, compartilhar, testar
 VISUAL STUDIO CODE: Editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código.
 
 GITHUB: Plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git.
+
+
+PARA COMPILAR E EXECUTAR O PROJETO É NECESSÁRIO TER INSTALADO O NODE.JS e um terminal , alguns exemplos são o cmd do windows, o bash do git e o terminal do Visual Studio Code e uma ferramenta de API cliente para acessar as rotas, alguns exemplos dessas ferramentas são Postman e Insomnia.
+
+
+INSTALAÇÃO:
+Clone o projeto https://github.com/Beneditoqlz/LuizaLabs.git .
+Apos a conclusão do download do projeto, navegue dentro da pasta LuizaLabs e execute algum terminal, na linha de comando digite: npm install, o node ira baixar os arquivos necessários para execução
