@@ -23,7 +23,7 @@ BCRYPT: Método de criptografia do tipo hash para senhas baseado no Blowfish
 
 MYSQL: Sistema de gerenciamento de banco de dados, que utiliza a linguagem SQL como interface. 
 
-POSTMAN:API Client que facilita aos desenvolvedores criar, compartilhar, testar e documentar APIs. Isso é feito, permitindo aos usuários criar e salvar solicitações HTTP e HTTPs simples e complexas, bem como ler suas respostas.
+POSTMAN: API Client que facilita aos desenvolvedores criar, compartilhar, testar e documentar APIs. Isso é feito, permitindo aos usuários criar e salvar solicitações HTTP e HTTPs simples e complexas, bem como ler suas respostas.
 
 
 VISUAL STUDIO CODE: Editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código.
