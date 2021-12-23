@@ -70,7 +70,6 @@ Caso o formato de comunicacao (tipo_comunicacao) não seja email, push, sms ou w
 
 2º Endpoint: Para verificar o status de um agendamento se coloca a seguinte URL (GET) http://localhost:3000/agendamentos/ seguida do id , por exemplo http://localhost:3000/agendamentos/2.
 Exemplo resultado:
-
 {
     "Agendamento": {
         "id_agendamento": 10,
