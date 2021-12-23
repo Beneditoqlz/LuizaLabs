@@ -36,4 +36,34 @@ PARA COMPILAR E EXECUTAR O PROJETO É NECESSÁRIO TER INSTALADO O NODE.JS e um t
 
 INSTALAÇÃO:
 Clone o projeto https://github.com/Beneditoqlz/LuizaLabs.git .
-Apos a conclusão do download do projeto, navegue dentro da pasta LuizaLabs e execute algum terminal, na linha de comando digite: npm install, o node ira baixar os arquivos necessários para execução
+É necessário executar o script contido no arquivo db_version.sql localizado na pasta database, para a criação do banco de dados.
+Apos a conclusão do download do projeto, navegue dentro da pasta LuizaLabs e execute o terminal, na linha de comando digite: npm install, o node ira baixar os arquivos necessários para execução, após digite no terminal npm start, e a aplicação irá iniciar.
+
+No aplicativo Postman ou Inomnia a primeira rota a ser executada deve ser a de cadastro de usuario na seguinte URL http://localhost:3000/users/cadastro, é necessário preencher um arquivo json, com usuario e senha para cadastro no banco como o a seguir:
+{
+    "usuario": "beneditoqlz2022",
+    "senha": "123456"
+}
+
+A aplicação retornara avisos dizendo se foi concluido com sucesso, se o usuario já existe. Será gerado tambem um token , que é exibido quando e feito o login, esse mesmo token será necessário para as ações de post e patch. 
+
+O login é feito pela URL: http://localhost:3000/users/login  e quando feito com sucesso retorna o seguinte arquivo json:
+{
+    "mensagem": "Autenticado com sucesso",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo1LCJ1c3VhcmlvIjoiYmVuZWRpdG9xbHoyMDIyIiwiaWF0IjoxNjQwMjk0MTkwLCJleHAiOjE2NDAzMTIxOTB9.wmhpPF5pBUdl4gyBN5m-0EFfezCHan01AnDMnCD8wQM"
+}
+(Observação: Para cada usuário é gerado um token diferente)
+
+A URL para Agendamento de envio de comunicação http://localhost:3000/agendamentos, é necessário inserir o token no postman ou insomnia com o type: bearen token, e enviar um arquivo json conforme o exemplo:
+{
+    "destinatario": "Benedito",
+    "mensagem": "Promoção Natal",
+    "situacao": "agendado",
+    "tipo_comunicacao": "email",
+    "recebimento": "beneditoqlz@hotmail.com",
+    "data": "2020-08-21 18:26:00"
+
+
+}
+
+Caso o formato de comunicacao (tipo_comunicacao) não seja email, push, sms ou whatsapp, o sistema retorna um erro , informando que o tipo de comunicação não é valido.
