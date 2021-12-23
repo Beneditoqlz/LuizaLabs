@@ -28,6 +28,8 @@ POSTMAN: API Client que facilita aos desenvolvedores criar, compartilhar, testar
 
 VISUAL STUDIO CODE: Editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código.
 
+HEROKU: Ferramenta para deploy.
+
 GITHUB: Plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git.
 
 
