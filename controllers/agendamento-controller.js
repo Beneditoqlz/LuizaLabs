@@ -9,7 +9,7 @@ exports.postAgendamentos = ('/',(req, res, next) => {
     if([req.body.tipo_comunicacao] =='email') {
       conn.query(
         'INSERT INTO comunicacao (destinatario, mensagem, tipo_comunicacao, situacao, recebimento, data) VALUES (?,?,?,?,?,?)',
-        [req.body.destinatario, req.body.mensagem,'1',req.body.situacao, req.body.recebimento,req.body.data],
+        [req.body.destinatario, req.body.mensagem,'5',req.body.situacao, req.body.recebimento,req.body.data],
         (error, result, field) => {
           conn.release();
           if (error){return res.status(500).send({ error: error})}
@@ -38,7 +38,7 @@ exports.postAgendamentos = ('/',(req, res, next) => {
     if([req.body.tipo_comunicacao] =='whatsapp') {
       conn.query(
         'INSERT INTO comunicacao (destinatario, mensagem, tipo_comunicacao, situacao, recebimento, data) VALUES (?,?,?,?,?,?)',
-        [req.body.destinatario, req.body.mensagem,'2',req.body.situacao, req.body.recebimento,req.body.data],
+        [req.body.destinatario, req.body.mensagem,'5',req.body.situacao, req.body.recebimento,req.body.data],
         (error, result, field) => {
           conn.release();
           if (error){return res.status(500).send({ error: error})}
@@ -67,7 +67,7 @@ exports.postAgendamentos = ('/',(req, res, next) => {
     if([req.body.tipo_comunicacao] =='push') {
       conn.query(
         'INSERT INTO comunicacao (destinatario, mensagem, tipo_comunicacao, situacao, recebimento, data) VALUES (?,?,?,?,?,?)',
-        [req.body.destinatario, req.body.mensagem,'3',req.body.situacao, req.body.recebimento,req.body.data],
+        [req.body.destinatario, req.body.mensagem,'5',req.body.situacao, req.body.recebimento,req.body.data],
         (error, result, field) => {
           conn.release();
           if (error){return res.status(500).send({ error: error})}
@@ -96,7 +96,7 @@ exports.postAgendamentos = ('/',(req, res, next) => {
     if([req.body.tipo_comunicacao] =='sms') {
       conn.query(
         'INSERT INTO comunicacao (destinatario, mensagem, tipo_comunicacao, situacao, recebimento, data) VALUES (?,?,?,?,?,?)',
-        [req.body.destinatario, req.body.mensagem,'4',req.body.situacao, req.body.recebimento,req.body.data],
+        [req.body.destinatario, req.body.mensagem,'5',req.body.situacao, req.body.recebimento,req.body.data],
         (error, result, field) => {
           conn.release();
           if (error){return res.status(500).send({ error: error})}
@@ -122,10 +122,7 @@ exports.postAgendamentos = ('/',(req, res, next) => {
         )
       
     }
-    else {
-      return res.status(404).send({mensagem: 'Tipo de comunicação não válido'})
-
-    }
+   
     
     
      
@@ -150,7 +147,7 @@ exports.getAgendamentos = (req, res, next) => {
           return {
             id: agen.id,
             destinatario: agen.destinatario,
-            situacao: agen.situacao,
+            mensagem: agen.mensagem,
             request:{
               descricao: 'Retorna os dados de um agendamento',
               url: 'http://localhost:3000/agendamento/'+agen.id
@@ -169,8 +166,8 @@ exports.updateAgendamentos = ('/',(req, res, next) => {
     if (error){ return res.status(500).send({error: error}) }
     
     conn.query(
-     'UPDATE COMUNICACAO SET situacao = ?  WHERE ID = ? ',
-     [req.body.situacao, req.body.id],
+     'UPDATE COMUNICACAO SET DESTINATARIO = ?, MENSAGEM = ? WHERE ID = ? ',
+     [req.body.destinatario,req.body.mensagem, req.body.id],
      (error, result, fields) => {
        conn.release();
       if (error){ return res.status(500).send({error: error}) }
@@ -178,7 +175,8 @@ exports.updateAgendamentos = ('/',(req, res, next) => {
         mensagem: 'Agendamento Cancelado com sucesso',
         AgendamentoAtualizado: {
           id: req.body.id,
-          destinario: req.body.destinatario,
+          destinatario: req.body.destinatario,
+          situacao: req.body.situacao,
           request :{
             tipo: 'GET',
             descricao: 'Retorna os dados de um agendamento em específico',
