@@ -1,9 +1,9 @@
 {
 "env" : {
-"MYSQL_USER" : "queluz0404_add1",
-"MYSQL_PASSWORD" : "pmqinfo2021",
-"MYSQL_DATABASE" : "queluz04",
-"MYSQL_HOST" : "mysql24-farm1.kinghost.net",
+"MYSQL_USER" : "localhost",
+"MYSQL_PASSWORD" : "",
+"MYSQL_DATABASE" : "plataforma",
+"MYSQL_HOST" : "localhost",
 "MYSQL_PORT" : 3306,
 
 "JWT_KEY" : "SECRET"
