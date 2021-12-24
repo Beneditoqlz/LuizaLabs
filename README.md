@@ -56,12 +56,12 @@ O login é feito pela URL: http://localhost:3000/users/login  e quando feito com
 }
 (Observação: Para cada usuário é gerado um token diferente)
 
-1º Endpoint: A URL para Agendamento de envio de comunicação(POST) http://localhost:3000/agendamentos, é necessário inserir o token no postman ou insomnia com o type: bearen token, e enviar um arquivo json conforme o exemplo:
+1º Endpoint: A URL para Agendamento de envio de comunicação(POST)http://localhost:3000/communications, é necessário inserir o token no postman ou insomnia com o type: bearen token, e enviar um arquivo json conforme o exemplo:
 {
     "destinatario": "Benedito",
     "mensagem": "Promoção Natal",
     "situacao": "agendado",
-    "tipo_comunicacao": "email",
+    "tipo": "email",
     "recebimento": "beneditoqlz@hotmail.com",
     "data": "2020-08-21 18:26:00"
 
@@ -70,21 +70,18 @@ O login é feito pela URL: http://localhost:3000/users/login  e quando feito com
 
 Caso o formato de comunicacao (tipo_comunicacao) não seja email, push, sms ou whatsapp, o sistema retorna um erro , informando que o tipo de comunicação não é valido.
 
-2º Endpoint: Para verificar o status de um agendamento se coloca a seguinte URL (GET) http://localhost:3000/agendamentos/ seguida do id , por exemplo http://localhost:3000/agendamentos/2.
+2º Endpoint: Para verificar o status de um agendamento se coloca a seguinte URL (GET) http://localhost:3000/communications/ seguida do id , por exemplo http://localhost:3000/agendamentos/1.
 Exemplo resultado:
 {
-    "Agendamento": {
-        "id_agendamento": 10,
-        "destinatario": "beneditoqlz",
-        "situacao": "agendado",
-        "request": {
-            "tipo": "GET",
-            "Descricao": "Retorna todos os agendamentos",
-            "url": "http://localhost:3000/agendamento/"
-        }
+    "communication": {
+        "id": 1,
+        "data_envio": "2020-08-21T21:26:00.000Z",
+        "destinatario": "Benedito teste2",
+        "mensagem": "Promoção xNatal",
+        "tipo": "sms",
+        "status": "À enviar"
     }
 }
-
 3° Endpoint - Cancelamento de um agendamento (PATCH) , acessar a URL http://localhost:3000/agendamentos e informar o id em um arquivo json:
 Exemplo Arquivo:
 {
