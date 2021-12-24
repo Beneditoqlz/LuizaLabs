@@ -90,6 +90,8 @@ Exemplo resultado:
         "status": "À enviar"
     }
 }
+
+
 3° Endpoint - Cancelamento de um agendamento (PATCH) , acessar a URL http://localhost:3000/communications/id/cancel e informar o id na url 
 Exemplo :
 http://localhost:3000/communications/2/cancel
