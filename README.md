@@ -41,7 +41,7 @@ Clone o projeto https://github.com/Beneditoqlz/LuizaLabs.git .
 É necessário executar o script contido no arquivo db_version.sql localizado na pasta database, para a criação do banco de dados.
 Apos a conclusão do download do projeto, navegue dentro da pasta LuizaLabs e execute o terminal, na linha de comando digite: npm install, o node ira baixar os arquivos necessários para execução, após digite no terminal npm start, e a aplicação irá iniciar.
 
-No aplicativo Postman ou Inomnia a primeira rota a ser executada deve ser a de cadastro de usuario na seguinte URL http://localhost:3000/users/cadastro, é necessário preencher um arquivo json, com usuario e senha para cadastro no banco como o a seguir:
+No aplicativo Postman ou Inomnia a primeira rota a ser executada deve ser a de cadastro de usuario na seguinte URL http://localhost:3000/users/register, é necessário preencher um arquivo json, com usuario e senha para cadastro no banco como o a seguir:
 {
     "usuario": "beneditoqlz2022",
     "senha": "123456"
