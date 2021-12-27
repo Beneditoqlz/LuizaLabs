@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 exports.cadastrarUsuarios =
-  ("/cadastro",
+  ("/register",
   (req, res, next) => {
     mysql.getConnection((error, conn) => {
       if (error) {
