@@ -1,5 +1,5 @@
 
-CREATE TABLE IF NOT EXISTS COMUNICACAO(
+CREATE TABLE IF NOT EXISTS comunicacao(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_usuario INT NOT NULL,
     destinatario VARCHAR(100) NOT NULL,
@@ -20,10 +20,10 @@ CREATE TABLE IF NOT EXISTS usuarios (
     senha VARCHAR(100) NOT NULL
 );
 
-ALTER TABLE COMUNICACAO ADD FOREIGN KEY (id_usuario)
+ALTER TABLEcomunicacao ADD FOREIGN KEY (id_usuario)
 REFERENCES usuarios (id_usuario);
 
-ALTER TABLE COMUNICACAO ADD FOREIGN KEY (tipo_comunicacao)
+ALTER TABLE comunicacao ADD FOREIGN KEY (tipo_comunicacao)
 REFERENCES tipo (id_tipo);
 
 INSERT INTO TIPO (TIPO) VALUES ('email');
