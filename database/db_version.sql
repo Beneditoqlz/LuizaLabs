@@ -38,5 +38,5 @@ CREATE TABLE IF NOT EXISTS status_comunicacao(
 
 INSERT INTO status_comunicacao (`status`) VALUES ('À enviar'), ('Enviada'), ('Cancelada');
 
-ALTER TABLE COMUNICACAO ADD FOREIGN KEY (id_status)
+ALTER TABLE comunicacao ADD FOREIGN KEY (id_status)
 REFERENCES status_comunicacao (id_status_comunicacao);
