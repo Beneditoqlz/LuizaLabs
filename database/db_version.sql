@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     senha VARCHAR(100) NOT NULL
 );
 
-ALTER TABLEcomunicacao ADD FOREIGN KEY (id_usuario)
+ALTER TABLE comunicacao ADD FOREIGN KEY (id_usuario)
 REFERENCES usuarios (id_usuario);
 
 ALTER TABLE comunicacao ADD FOREIGN KEY (tipo_comunicacao)
