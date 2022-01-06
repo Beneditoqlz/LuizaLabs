@@ -77,7 +77,7 @@ Exemplo Retorno:
 }
 Caso o formato de comunicacao (tipo) não seja email, push, sms ou whatsapp, o sistema retorna um erro , informando que o tipo de comunicação não é valido.
 
-2º Endpoint: Para verificar o status de um agendamento se coloca a seguinte URL (GET) http://localhost:3000/communications/ seguida do id , por exemplohttp://localhost:3000/communications/2.
+2º Endpoint: Para verificar o status de um agendamento se coloca a seguinte URL (GET) http://localhost:3000/communications/ seguida do id , por exemplo http://localhost:3000/communications/2.
 Exemplo resultado:
 {
     "communication": {
